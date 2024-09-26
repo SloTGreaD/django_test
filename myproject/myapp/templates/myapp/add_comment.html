@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить комментарий</title>
+</head>
+<body>
+    <h1>Добавить комментарий к статье "{{ post.title }}"</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="content">Комментарий:</label>
+        <textarea id="content" name="content"></textarea>
+        <button type="submit">Добавить комментарий</button>
+    </form>
+</body>
+</html>

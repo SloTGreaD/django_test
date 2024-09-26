@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Обновить статью</title>
+</head>
+<body>
+    <h1>Обновить статью</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Заголовок:</label>
+        <input type="text" id="title" name="title" value="{{ post.title }}">
+        <label for="content">Содержимое:</label>
+        <textarea id="content" name="content">{{ post.content }}</textarea>
+        <button type="submit">Обновить</button>
+    </form>
+</body>
+</html>

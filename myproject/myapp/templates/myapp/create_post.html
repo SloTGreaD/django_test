@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создать статью</title>
+</head>
+<body>
+    <h1>Создать статью</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Заголовок:</label>
+        <input type="text" id="title" name="title">
+        <label for="content">Содержимое:</label>
+        <textarea id="content" name="content"></textarea>
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>
+
